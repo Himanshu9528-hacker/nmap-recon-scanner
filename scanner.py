@@ -1,4 +1,6 @@
-from modules.basic_scan import run_basic_scan
+from modules.basic_scan import run_scan as run_basic_scan
+from modules.full_scan import run_full_scan
+from modules.stealth_scan import run_stealth_scan
 from modules.service_scan import run_service_scan
 from modules.vuln_scan import run_vuln_scan
 from modules.output_handler import save_output
@@ -22,28 +24,26 @@ if permission.strip().lower() != "i have permission to scan":
     exit()
 
 # 🧪 Ask for scan type
-scan_type = input("\n🧪 Choose scan type (fast/full/stealth): ").strip().lower()
-
-# 🔧 Basic scan logic with mode selection
-def run_basic_scan(target, mode="fast"):
-    if mode == "fast":
-        cmd = ["nmap", "-Pn", "-T4", "-F", "-n", target]
-    elif mode == "full":
-        cmd = ["nmap", "-Pn", "-T4", "-p-", "-n", target]
-    elif mode == "stealth":
-        cmd = ["nmap", "-sS", "-Pn", "-n", target]
-    else:
-        cmd = ["nmap", "-Pn", "-T4", "-F", "-n", target]
-
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    return result.stdout
+scan_type = input("\n🧪 Choose scan type (basic/full/stealth): ").strip().lower()
 
 # 🚀 Start scanning
 print("\n✅ Permission confirmed. Starting scan...\n")
 
-print("[+] Running basic scan...")
-basic_result = run_basic_scan(target, scan_type)
+# 🔧 Run selected scan
+if scan_type == "basic":
+    print("[+] Running basic scan...")
+    basic_result = run_basic_scan(target)
+elif scan_type == "full":
+    print("[+] Running full scan...")
+    basic_result = run_full_scan(target)
+elif scan_type == "stealth":
+    print("[+] Running stealth scan...")
+    basic_result = run_stealth_scan(target)
+else:
+    print("❌ Invalid scan type. Defaulting to basic scan.")
+    basic_result = run_basic_scan(target)
 
+# 🔧 Run service and vulnerability scans
 print("[+] Running service scan...")
 service_result = run_service_scan(target)
 
@@ -51,5 +51,10 @@ print("[+] Running vulnerability scan...")
 vuln_result = run_vuln_scan(target)
 
 # 💾 Save results
-save_output(target, basic_result, service_result, vuln_result)
+save_output(target, {
+    "Basic Scan": basic_result,
+    "Service Scan": service_result,
+    "Vulnerability Scan": vuln_result
+})
+
 print("\n✅ Scan complete. Results saved in results/scan_logs.txt")
