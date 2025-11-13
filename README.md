@@ -35,10 +35,10 @@ This tool is for awareness, education, and authorized testing only.
 
 
 ## 🧪 Scan Modes
-Mode	Flags Used	Description
-basic	-Pn -T4 -F -n	Fast scan on top 100 ports
-full	-Pn -T4 -p- -n	Full port scan (1–65535)
-stealth	-sS -Pn -n	SYN scan (stealthy and quiet)
+#Mode	Flags Used	Description
+#basic	-Pn -T4 -F -n	Fast scan on top 100 ports
+#full	-Pn -T4 -p- -n	Full port scan (1–65535)
+#stealth	-sS -Pn -n	SYN scan (stealthy and quiet)
 ## 📦 Modules
 
 Module	Purpose  /
@@ -85,4 +85,5 @@ Himanshu Yadav — Hacker Professor 👨‍💻 GitHub: @Himanshu9528-hacker
 
 ```bash
 python scanner.py
+
 
