@@ -31,4 +31,8 @@ This tool is for awareness, education, and authorized testing only.
 ```bash
 python scanner.py
 
+🙌 Author
+Himanshu Yadav — Hacker Professor 👨‍💻 GitHub: @Himanshu9528-hacker
+
+
 
