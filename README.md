@@ -41,13 +41,13 @@ full	-Pn -T4 -p- -n	Full port scan (1–65535)
 stealth	-sS -Pn -n	SYN scan (stealthy and quiet)
 ## 📦 Modules
 
-Module	Purpose
-basic_scan.py	Fast top-port scan
-full_scan.py	Full port scan
-stealth_scan.py	SYN stealth scan
-service_scan.py	Service fingerprinting
-vuln_scan.py	Vulnerability detection
-output_handler.py	Save results to file
+Module	Purpose  /
+basic_scan.py	/ /Fast top-port scan
+full_scan.py  // 	Full port scan
+stealth_scan.py //	SYN stealth scan
+service_scan.py  //	Service fingerprinting
+vuln_scan.py	 // Vulnerability detection
+output_handler.py //	Save results to file
 ## 📁 Folder Structure
 
 
@@ -85,3 +85,4 @@ Himanshu Yadav — Hacker Professor 👨‍💻 GitHub: @Himanshu9528-hacker
 
 ```bash
 python scanner.py
+
