@@ -35,9 +35,3 @@ GitHub: @Himanshu9528-hacker
 
 ```bash
 python scanner.py
-
-
-
-
-
-
