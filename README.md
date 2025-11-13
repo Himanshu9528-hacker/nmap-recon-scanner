@@ -48,21 +48,7 @@ stealth_scan.py //	SYN stealth scan
 service_scan.py  //	Service fingerprinting
 vuln_scan.py	 // Vulnerability detection
 output_handler.py //	Save results to file
-## 📁 Folder Structure
 
-
-modular-recon-suite/
-├── scanner.py
-├── README.md
-├── results/
-│   └── scan_logs.txt
-├── modules/
-│   ├── basic_scan.py
-│   ├── full_scan.py
-│   ├── stealth_scan.py
-│   ├── service_scan.py
-│   ├── vuln_scan.py
-│   └── output_handler.py
 
 🔮 Roadmap
 🌐 WHOIS and DNS modules
@@ -85,5 +71,6 @@ Himanshu Yadav — Hacker Professor 👨‍💻 GitHub: @Himanshu9528-hacker
 
 ```bash
 python scanner.py
+
 
 
