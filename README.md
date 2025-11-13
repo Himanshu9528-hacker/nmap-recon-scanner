@@ -24,8 +24,9 @@ Before scanning, user must confirm permission by typing:I have permission to sca
 Unauthorized scanning is strictly prohibited.  
 This tool is for awareness, education, and authorized testing only.
 
-🙌 Author
-Himanshu Yadav — Hacker Professor 👨‍💻 GitHub: @Himanshu9528-hacker
+## 🙌 Author
+Himanshu Yadav — Hacker Professor 👨‍💻 
+GitHub: @Himanshu9528-hacker
 
 
 ---
@@ -34,6 +35,7 @@ Himanshu Yadav — Hacker Professor 👨‍💻 GitHub: @Himanshu9528-hacker
 
 ```bash
 python scanner.py
+
 
 
 
